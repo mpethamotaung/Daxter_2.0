@@ -1,0 +1,24 @@
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "${BACKEND_PORT:-8000}:8008"
+    environment:
+      - DATABASE_URL=sqlite+aiosqlite:///./daxter.db
+      - AGENT_POLL_INTERVAL=10
+      - LOG_LEVEL=INFO
+    volumes:
+      - db-data:/app
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "${FRONTEND_PORT:-5173}:5173"
+    environment:
+      - VITE_BACKEND_URL=http://backend:8008
+      - VITE_HOST=0.0.0.0
+    depends_on:
+      - backend
+
+volumes:
+  db-data:
