@@ -10,25 +10,25 @@ A unified dashboard for accountants that consolidates real-time financial and ta
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│                    React Frontend                        │
+│                    React Frontend                       │
 │  KPI Cards │ Charts │ Tax Tracker │ AI Chat │ Alerts    │
-│                    ↕ WebSocket + REST                    │
+│                    ↕ WebSocket + REST                   │
 ├─────────────────────────────────────────────────────────┤
-│                   FastAPI Backend                         │
+│                   FastAPI Backend                       │
 │  ┌─────────────────────────────────────────────────┐    │
-│  │              Agent Orchestrator                   │    │
+│  │              Agent Orchestrator                 │    │
 │  │  ┌──────────┐ ┌──────────┐ ┌──────────────────┐ │    │
 │  │  │Financial │ │   Tax    │ │    Accounts      │ │    │
 │  │  │  Data    │ │Compliance│ │ Receivable / AP  │ │    │
 │  │  └──────────┘ └──────────┘ └──────────────────┘ │    │
-│  │  ┌──────────┐                                    │    │
-│  │  │  Audit   │    AI Query Engine                 │    │
-│  │  └──────────┘                                    │    │
+│  │  ┌──────────┐                                   │    │
+│  │  │  Audit   │    AI Query Engine                │    │
+│  │  └──────────┘                                   │    │
 │  └─────────────────────────────────────────────────┘    │
 ├─────────────────────────────────────────────────────────┤
-│                  SQLite Database                          │
-│  financial_records │ tax_compliance │ accounts_*          │
-│  agent_logs │ alerts │ query_history                      │
+│                  SQLite Database                        │
+│  financial_records │ tax_compliance │ accounts_*        │
+│  agent_logs │ alerts │ query_history                    │
 └─────────────────────────────────────────────────────────┘
 ```
 
