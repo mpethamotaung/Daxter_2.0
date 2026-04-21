@@ -68,9 +68,9 @@ A unified dashboard for accountants that consolidates real-time financial and ta
 
 ## Tech Stack
 
-| Layer     | Technology                              |
+| Layer     | Technology                             |
 |-----------|----------------------------------------|
-| Frontend  | React 18, Vite, TailwindCSS, Recharts |
+| Frontend  | React 18, Vite, TailwindCSS, Recharts  |
 | Backend   | Python 3.12, FastAPI, SQLAlchemy 2.0   |
 | Database  | SQLite (async via aiosqlite)           |
 | Real-time | WebSocket                              |
@@ -137,7 +137,7 @@ Detailed guides for setup, port configuration, and troubleshooting are in the [`
 | GET    | `/api/agents/status`              | All agent states             |
 | GET    | `/api/agents/logs`                | Agent activity logs          |
 | GET    | `/api/agents/alerts`              | All alerts                   |
-| POST   | `/api/agents/alerts/{id}/acknowledge` | Acknowledge an alert    |
+| POST   | `/api/agents/alerts/{id}/acknowledge` | Acknowledge an alert     |
 | POST   | `/api/query/`                     | Ask AI assistant             |
 | GET    | `/api/query/history`              | Past queries                 |
 | GET    | `/api/data/financial`             | Financial records            |
